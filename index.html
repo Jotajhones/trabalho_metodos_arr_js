@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/x-icon">
+    <title>João Pedro de Lima</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+</head>
+
+<body class="body">
+    <header class="mainHeader">
+        <nav>
+            <ul class="menu">
+                <li class="menuItem" data-metodo="includes">includes</li>
+                <li class="menuItem" data-metodo="indexof">index of</li>
+                <li class="menuItem" data-metodo="some">some</li>
+                <li class="menuItem" data-metodo="every">Every</li>
+                <li class="menuItem" data-metodo="find">find</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <div class="mainContent">
+            <div class="headerMainContent">includes</div>
+            <div class="content">
+                <div class="nome"><span class="tagMainContent">Nome: </span></div>
+                <div class="tipo"><span class="tagMainContent">Tipo: </span></div>
+                <div class="resumo"><span class="tagMainContent">Resumo: </span></div>
+                <div class="sintaxe"><span class="tagMainContent">Sintaxe: </span></div>
+                <div class="polyfill"><span class="tagMainContent">Polyfill: </span></div>
+            </div>
+        </div>
+        <div class="asideContent">
+            <div class="headerMainContent">Exemplo</div>
+
+            <div class="content">
+
+                <div class="searchContainer">
+                    <input type="search" name="searchbar" id="searchbar">
+                    <button type="button" class="searchButton"><img src="./assets/icons/search.png" alt="lupa"></button>
+                </div>
+
+                <div class="result"></div>
+
+                <div class="code"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
