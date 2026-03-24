@@ -1,0 +1,165 @@
+:root {
+    /* PALETA 5.1 (Cinza Dashboard + Destaques Quentes) */
+    --bg-color: #E8EBED; /* Cinza clássico e neutro de "interface sem conteúdo" */
+    --font-color: #260404; /* Marrom ultra escuro para os textos comuns */
+    
+    --menu-font-color: white;
+    --menu-bg-color: #260404; /* Trocamos o menu vermelho pelo escuro. Isso tira 80% da "agressividade" da tela! */
+    --menu-color-hover: rgba(255, 255, 255, 0.15);
+    
+    --content-header-bg-color: #F2561D; /* Laranja forte e elegante para os cabeçalhos */
+    --content-header-font-color: white;
+    
+    --content-accent-color: #F29422; /* Laranja mais suave/amarelado para as bordas e foco do input */
+    --content-accent-font: #F22F1D;  /* O Vermelho vibrante volta aqui, APENAS para destacar as tags de texto */
+    
+    --button-color: #F22F1D; /* Vermelho vibrante no botão da lupa pra ser o "Call to Action" da tela */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: var(--bg-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mainHeader {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--menu-bg-color);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menuItem {
+    list-style: none;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: large;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--menu-font-color);
+    cursor: pointer;
+}
+
+.menuItem:hover {
+    background-color: var(--menu-color-hover);
+    transition: 0.4s;
+}
+
+.main {
+    height: calc(100vh - 71px);
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px;
+    gap: 10px;
+}
+
+.headerMainContent {
+    background-color: var(--content-header-bg-color);
+    color: var(--content-header-font-color);
+    font-size: large;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 15px 0px 0px 0px;
+}
+
+.content {
+    border: 1px solid var(--content-accent-color);
+    border-radius: 0px 0px 15px 0px;
+    height: calc(100vh - 121px);
+    padding: 10px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.tagMainContent {
+    font-weight: bold;
+    color: var(--content-accent-font);
+}
+
+pre {
+    background-color: #232730; 
+    color: #abb2bf; 
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+}
+
+.searchContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    height: 35px;
+    border: 1px solid var(--menu-bg-color);
+}
+
+.searchContainer #searchbar {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+    text-indent: 10px;
+}
+
+#searchbar:focus {
+    border: 2px solid var(--content-accent-color);
+}
+
+.searchButton {
+    width: 100px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--button-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+}
+
+.searchButton img {
+    width: 24px;
+}
+
+.searchButton:hover {
+    background-color: var(--menu-bg-color);
+}
+
+.result {
+    border-radius: 0px 0px 15px 0px;
+    padding: 10px;
+    background-color: white;
+    overflow: auto;
+}
